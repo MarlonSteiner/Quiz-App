@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+    <!--Logo-->
+    <div class="logo">
+        <img svg="cs50/week10_2025/quiz_app/static/Logo.svg">
+    </div>
+
+    <!--Login Form-->
+    <form>
+        <div class="container">
+            <label for="username">Username</label>
+            <input id="username" type="text" required>
+
+            <label for="password">Password</label>
+            <input id="password" type="password" required>
+
+            <input type="submit">Login</button>
+        </div>
+    </form>
+    <a href="/register"class="register-link">Register</a>
+
+{% endblock %}
