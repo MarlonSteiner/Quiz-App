@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+
+ <!--Logo-->
+
+    <div class="logo">
+        <img svg="cs50/week10_2025/quiz_app/static/Logo.svg">
+    </div>
+
+    <!--Login Form-->
+    <form>
+        <div class="container">
+            <label>Username</label>
+            <input type="text" required>
+
+            <label>Password</label>
+            <input type="password" required>
+
+            <label>Confirm</label>
+            <input type="confirm" required>
+            <button type="submit">Register</button>
+        </div>
+    </form>
+    <a href="/login"class="login-link">Login</a>
+
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <script>
+                    alert("");
+                </script>
+            {% endif %}
+        {% endwith %}
+
+{% endblock %}
